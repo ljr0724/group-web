@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>幻贺箍牙</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: white;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px;
+        }
+
+        .container {
+            max-width: 100%;
+            width: 100%;
+        }
+
+        .group-box {
+            background: white;
+            border-radius: 0;
+            padding: 20px 20px;
+            text-align: center;
+            margin-bottom: 50px;
+            box-shadow: none;
+        }
+
+        .group-name {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .group-name span {
+            color: black;
+        }
+
+        .members-grid {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 50px;
+            flex-wrap: nowrap;
+        }
+
+        .member-card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px 20px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            flex: 1;
+            min-width: 0;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
+        .member-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        .member-avatar {
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+
+        .member-name {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .footer-box {
+            background: white;
+            border-radius: 20px;
+            padding: 25px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            color: #666;
+            font-size: 1rem;
+            width: 100%;
+        }
+/* ========== 手机适配 ========== */
+@media (max-width: 768px) {
+    body {
+        padding: 20px 10px;
+    }
+
+    .group-name {
+        font-size: 1.8rem;
+    }
+
+    .members-grid {
+        flex-wrap: wrap;      /* 允许换行 */
+        gap: 15px;
+        padding: 0 10px;
+    }
+
+    .member-card {
+        flex: 0 0 calc(50% - 15px);  /* 每行显示2个 */
+        min-width: auto;
+        padding: 20px 10px;
+    }
+
+    .member-avatar {
+        font-size: 2.5rem;
+    }
+
+    .member-name {
+        font-size: 1rem;
+    }
+
+    .footer-box {
+        font-size: 0.8rem;
+        padding: 15px;
+    }
+}
+
+/* 小手机（宽度小于480px） */
+@media (max-width: 480px) {
+    .member-card {
+        flex: 0 0 calc(50% - 10px);  /* 每行2个 */
+    }
+
+    .group-name {
+        font-size: 1.5rem;
+    }
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="group-box">
+            <div class="group-name">
+                <span>幻贺箍牙</span>
+            </div>
+        </div>
+
+        <div class="members-grid">
+            <a href="群主.html" class="member-card">
+                <div class="member-avatar"></div>
+                <div class="member-name">群🐖</div>
+             </a>
+
+            <a href="Arnold.html" class="member-card">
+                <div class="member-avatar"></div>
+                <div class="member-name">Arnold</div>
+             </a>
+
+            <a href="Bernard.html" class="member-card">
+                <div class="member-avatar"></div>
+                <div class="member-name">Bernard</div>
+             </a>
+
+            <a href="Hacker.html" class="member-card">
+                <div class="member-avatar"></div>
+                <div class="member-name">Hacker</div>
+            </a>
+
+            <a href="Humpy.html" class="member-card">
+                <div class="member-avatar"></div>
+                <div class="member-name">Humpy</div>
+             </a>
+        </div>
+
+        <div class="footer-box">
+            幻贺箍牙
+        </div>
+    </div>
+</body>
+</html>
